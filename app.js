@@ -4,6 +4,13 @@ require("dotenv/config");
 
 // ℹ️ Connects to the database
 require("./db");
+const mongoose     = require('mongoose');
+// const session = require('express-session');
+// const cookieParser = require('cookie-parser');
+// const bodyParser   = require('body-parser');
+// const path         = require('path');
+// const favicon      = require('serve-favicon');
+// const cors = require("cors");
 
 
 //mongoose:
@@ -20,7 +27,7 @@ const MongoStore = require('connect-mongo')
 app.use(session({
 Secret: 'doesnt matter for now',
 Resave: false,
-save Unitialized: false ,			//---> dont create cookies for non logged in users
+saveUnitialized: false,			//---> dont create cookies for non logged in users
 Store: MongoStore.create({mongoUrl: 'mongodb://localhost/lab-profile-app'})
 }));
 
