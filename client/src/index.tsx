@@ -4,9 +4,15 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+interface welcomeText{
+  headerText: string;
+  extraText: string
+}
+
 ReactDOM.render(
   <React.StrictMode>
-    <App headerText="Welcome to the Shop" extraText='Hello <username>' />
+    {/* <App headerText="Welcome to the Shop" extraText='Hello <username>' /> */}
+    <App/>
   </React.StrictMode>,
   document.getElementById('root')
 );
