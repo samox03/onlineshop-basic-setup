@@ -21,13 +21,13 @@ export default function NavBar() {
             navbar
           >
             <NavItem>
-              <NavLink href="/components/">
-                Components
+              <NavLink href="/New/">
+                New
               </NavLink>
             </NavItem>
             <NavItem>
               <NavLink href="https://github.com/reactstrap/reactstrap">
-                GitHub
+                External Link
               </NavLink>
             </NavItem>
             <UncontrolledDropdown
@@ -38,18 +38,18 @@ export default function NavBar() {
                 caret
                 nav
               >
-                Options
+                Collection
               </DropdownToggle>
               <DropdownMenu right>
                 <DropdownItem>
-                  Option 1
+                  Winter
                 </DropdownItem>
                 <DropdownItem>
-                  Option 2
+                  Summer
                 </DropdownItem>
                 <DropdownItem divider />
                 <DropdownItem>
-                  Reset
+                  Sale %
                 </DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
