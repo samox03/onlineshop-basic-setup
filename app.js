@@ -4,14 +4,24 @@ require("dotenv/config");
 
 // ℹ️ Connects to the database
 require("./db");
+
+// Handles http requests (express is node js framework)
+// https://www.npmjs.com/package/express
+const express = require("express");
+
 const mongoose     = require('mongoose');
-// const session = require('express-session');
+const session = require('express-session');
 // const cookieParser = require('cookie-parser');
 // const bodyParser   = require('body-parser');
 // const path         = require('path');
 // const favicon      = require('serve-favicon');
+// const logger       = require('morgan');
 // const cors = require("cors");
 
+
+const app = express();
+// use session: 
+//require('./configs/session-configs')(app);
 
 //mongoose:
 mongoose
@@ -28,15 +38,9 @@ app.use(session({
 Secret: 'doesnt matter for now',
 Resave: false,
 saveUnitialized: false,			//---> dont create cookies for non logged in users
-Store: MongoStore.create({mongoUrl: 'mongodb://localhost/lab-profile-app'})
+Store: MongoStore.create({mongoUrl: "mongodb://localhost/lab-profile-app"})
 }));
 
-
-// Handles http requests (express is node js framework)
-// https://www.npmjs.com/package/express
-const express = require("express");
-
-const app = express();
 
 
 // ℹ️ This function is getting exported from the config folder. It runs most pieces of middleware
