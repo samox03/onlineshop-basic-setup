@@ -1,7 +1,7 @@
 # onlineshop-basic-setup
 Typescript onlineshop for training purpose
 
-#___________________________
+___________________________
 
 Frontend-> ReactJS
 
