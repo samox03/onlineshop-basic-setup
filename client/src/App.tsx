@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Footer from './components/footer/Footer';
+import NavBar from './components/navigation/Navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
@@ -13,8 +14,8 @@ function App() {
   return (
     <div className="App">
       <div> 
-        <p>import Navbar Component</p>
-        <p>Display either customer name or just say hello</p>
+        <NavBar></NavBar>
+       
         <p>Show grid with products</p>
         <Footer></Footer>
         {/* <h1>{headerText}</h1>
