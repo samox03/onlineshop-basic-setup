@@ -6,10 +6,18 @@ import { Carousel, CarouselIndicators, CarouselItem, CarouselCaption, CarouselCo
 export default function ProductCarousel() {
 
   return (
+    <div>
+    <style>
+      {`.custom-tag {
+                    max-width: 100%;
+                    height: 500px;
+                    background: black;
+                  }`}
+    </style>
     <Carousel
       activeIndex={0}
-      next={function noRefCheck() { }}
-      previous={function noRefCheck() { }}
+      next={function noRefCheck(){}}
+      previous={function noRefCheck(){}}
     >
       <CarouselIndicators
         activeIndex={0}
@@ -17,74 +25,66 @@ export default function ProductCarousel() {
           {
             altText: 'Slide 1',
             caption: 'Slide 1',
-            key: 1,
-            src: 'https://picsum.photos/id/123/1200/600'
+            id: 1
           },
           {
             altText: 'Slide 2',
             caption: 'Slide 2',
-            key: 2,
-            src: 'https://picsum.photos/id/456/1200/600'
+            id: 2
           },
           {
             altText: 'Slide 3',
             caption: 'Slide 3',
-            key: 3,
-            src: 'https://picsum.photos/id/678/1200/600'
+            id: 3
           }
         ]}
-        onClickHandler={function noRefCheck() { }}
+        onClickHandler={function noRefCheck(){}}
       />
       <CarouselItem
-        onExited={function noRefCheck() { }}
-        onExiting={function noRefCheck() { }}
+        className="custom-tag"
+        onExited={function noRefCheck(){}}
+        onExiting={function noRefCheck(){}}
       >
-        <img
-          alt="Slide 1"
-          src="https://picsum.photos/id/123/1200/600"
-        />
         <CarouselCaption
           captionHeader="Slide 1"
           captionText="Slide 1"
+          className="text-danger"
         />
       </CarouselItem>
       <CarouselItem
-        onExited={function noRefCheck() { }}
-        onExiting={function noRefCheck() { }}
+        className="custom-tag"
+        onExited={function noRefCheck(){}}
+        onExiting={function noRefCheck(){}}
       >
-        <img
-          alt="Slide 2"
-          src="https://picsum.photos/id/456/1200/600"
-        />
         <CarouselCaption
           captionHeader="Slide 2"
           captionText="Slide 2"
+          className="text-danger"
         />
       </CarouselItem>
       <CarouselItem
-        onExited={function noRefCheck() { }}
-        onExiting={function noRefCheck() { }}
+        className="custom-tag"
+        onExited={function noRefCheck(){}}
+        onExiting={function noRefCheck(){}}
       >
-        <img
-          alt="Slide 3"
-          src="https://picsum.photos/id/678/1200/600"
-        />
         <CarouselCaption
           captionHeader="Slide 3"
           captionText="Slide 3"
+          className="text-danger"
         />
       </CarouselItem>
       <CarouselControl
         direction="prev"
         directionText="Previous"
-        onClickHandler={function noRefCheck() { }}
+        onClickHandler={function noRefCheck(){}}
       />
       <CarouselControl
         direction="next"
         directionText="Next"
-        onClickHandler={function noRefCheck() { }}
+        onClickHandler={function noRefCheck(){}}
       />
     </Carousel>
+  </div>
 
   )
 }

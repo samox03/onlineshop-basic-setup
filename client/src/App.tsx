@@ -6,6 +6,7 @@ import Footer from './components/footer/Footer';
 import NavBar from './components/navigation/Navbar';
 import ProductCarousel from './components/products/carousel/ProductCarousel';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Main } from './components/products/Main';
 
 function App() {
 
@@ -26,9 +27,9 @@ function App() {
       <div> 
         <NavBar></NavBar>
         {/* <ProductCarousel></ProductCarousel> */}
+        <Main></Main>
         <p>Show grid with products</p>
         {/* {result && <h1>{result}</h1>} */}
-
         <Footer></Footer>
         {/* <h1>{headerText}</h1>
         <p> {extraText}</p> */}

@@ -40,7 +40,7 @@ export default function NavBar() {
               >
                 Collection
               </DropdownToggle>
-              <DropdownMenu right>
+              <DropdownMenu end>
                 <DropdownItem>
                   Winter
                 </DropdownItem>
