@@ -1,6 +1,7 @@
 import React from 'react';
 import { Jumbotron } from '../extras/Jumbotron';
 //import { Card } from './card';
+
 export const Main = () => {
  return (
   <main role="main">

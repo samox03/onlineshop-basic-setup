@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import { Route, Routes } from "react-router-dom";
+
 import logo from './logo.svg';
 import './App.css';
 import axios from "./axios";
@@ -27,7 +29,15 @@ function App() {
       <div> 
         <NavBar></NavBar>
         {/* <ProductCarousel></ProductCarousel> */}
-        <Main></Main>
+
+        <Routes>
+          {/* using Routes instead of Switch as V6 got some changes */}
+          <Route path='/' element={<Main/>}/>
+          {/* <Route path='/sale' element={<Sale/>}/>
+          <Route path='/products' element={<Products/>}/>
+          <Route path='/products/:productId' element={<ProductDetails/>}/> */}
+
+        </Routes>
         <p>Show grid with products</p>
         {/* {result && <h1>{result}</h1>} */}
         <Footer></Footer>
