@@ -3,16 +3,18 @@ const { boolean } = require("webidl-conversions");
 
 const productSchema = new Schema(
   {
-  id: {type: number,},
-title: {type: string,},
-price: {type: number},
-description: {type: string},
-category: {type: string},
-image: {type: string,},
-rating: {
-rate: {type: number,},
-count: {type: number,}
-}
+    id: { type: Number, },
+    title: { type: String, },
+    price: { type: Number },
+    description: { type: String },
+    category: { type: String },
+    image: { type: String, },
+    rating: {
+      rate: { type: Number, },
+      count: { type: Number, }
+    }
+  },
+  {  timestamps: true
   }
 )
 
