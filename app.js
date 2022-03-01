@@ -87,7 +87,15 @@ const allRoutes = require("./routes");
 app.use("/api", allRoutes);
 
 
-// ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
-require("./error-handling")(app);
+
+// // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
+// require("./error-handling")(app);
+// => instead used the following error routing:
+
+app.use((req, res, next) => {
+  // If no routes match, send them the React HTML.
+  res.sendFile(__dirname + "/client/build/index.html");
+});
+
 
 module.exports = app;

@@ -14,6 +14,8 @@ function App() {
 
   const [result, setResult] = useState("");
 
+  const [user, setUser] = useState(""); //props.user?
+
   useEffect(() => {
     console.log("This only run once!");
   }, []);
@@ -35,7 +37,9 @@ function App() {
           <Route path='/' element={<Main/>}/>
           {/* <Route path='/sale' element={<Sale/>}/>
           <Route path='/products' element={<Products/>}/>
-          <Route path='/products/:productId' element={<ProductDetails/>}/> */}
+          <Route path='/products/:productId' element={<ProductDetails/>}/> 
+          <Route exact path='/login/admin' element={<Login/>} />
+*/}
 
         </Routes>
         <p>Show grid with products</p>
