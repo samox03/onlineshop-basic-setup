@@ -13,6 +13,8 @@
   background-color: white;
   text-align: center;
   padding-top: 15px;
+  margin-top:auto; 
+
 }
 
 .container-footer {
@@ -26,3 +28,5 @@
   text-decoration: none;
   color: rgba(94, 38, 247, 0.938);
 }
+
+

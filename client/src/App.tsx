@@ -33,7 +33,7 @@ function App() {
 
   return (
     <div className="App">
-      <div>
+      <div className='body'>
         <NavBar></NavBar>
         {/* <ProductCarousel></ProductCarousel> */}
 
