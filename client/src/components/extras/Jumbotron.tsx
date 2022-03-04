@@ -15,7 +15,7 @@ export const Jumbotron = () => {
      <a href="#" className="btn btn-primary m-2">
       New Collection
      </a>
-     <a href="#" className="btn btn-secondary m-2">
+     <a href="/sale" className="btn btn-secondary m-2">
       Sale %
      </a>
     </p>

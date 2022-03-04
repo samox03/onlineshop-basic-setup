@@ -4,10 +4,10 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 
 
-export const ProductDetails = () => {
+export const Sale = () => {
   return (
     <div>
-      <p>Display Productdetails</p>
+      <p>Display Items in Sale</p>
     </div>
   )
 }

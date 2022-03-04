@@ -7,8 +7,13 @@ import axios from "./axios";
 import Footer from './components/footer/Footer';
 import NavBar from './components/navigation/Navbar';
 import ProductCarousel from './components/products/carousel/ProductCarousel';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import { Sale } from './components/products/sale/Sale'
+import { ProductDetails } from './components/products/product_details/ProductDetails'
+import { Login } from './components/auth/Login';
 import { Main } from './components/products/Main';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
 
@@ -28,18 +33,19 @@ function App() {
 
   return (
     <div className="App">
-      <div> 
+      <div>
         <NavBar></NavBar>
         {/* <ProductCarousel></ProductCarousel> */}
 
         <Routes>
           {/* using Routes instead of Switch as V6 got some changes */}
-          <Route path='/' element={<Main/>}/>
-          {/* <Route path='/sale' element={<Sale/>}/>
-          <Route path='/products' element={<Products/>}/>
-          <Route path='/products/:productId' element={<ProductDetails/>}/> 
-          <Route exact path='/login/admin' element={<Login/>} />
-*/}
+          <Route path='/' element={<Main />} />
+          <Route path='/sale' element={<Sale />} />
+          <Route path='/products/:productId' element={<ProductDetails />} />
+          {/* <Route path='/collection/winter' element={<Winter/>}></Route> */}
+          {/* <Route path='/collection/summer' element={<Summer/>}></Route> */}
+          <Route path='/login' element={<Login/>} />
+
 
         </Routes>
         <p>Show grid with products</p>

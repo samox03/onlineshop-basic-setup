@@ -48,8 +48,8 @@ export default function NavBar() {
                   Summer
                 </DropdownItem>
                 <DropdownItem divider />
-                <DropdownItem>
-                  Sale %
+                <DropdownItem href="/sale">
+                  Sale %   
                 </DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
