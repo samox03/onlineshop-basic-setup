@@ -8,7 +8,7 @@ render(): React.ReactNode {
       <div className="footer">
       <div className="container-footer">
         {/* <Link to='/about' className="link-footer">About Us</Link > */}
-        <div> <Link to="/login"><p>&copy; Samox 2022</p></Link></div>
+        <div> <a href="https://github.com/samox03"><p>&copy; Samox 2022</p></a></div>
         <Link to="/login">Login</Link>
       </div>
     </div>

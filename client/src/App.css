@@ -2,6 +2,7 @@
   text-align: center;
 }
 
+/* for adjusting footer at bottom of page: */
 .body{
   display:flex; 
   flex-direction:column; 

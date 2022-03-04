@@ -26,7 +26,7 @@ export default function NavBar() {
               </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="https://github.com/reactstrap/reactstrap">
+              <NavLink href="https://github.com/samox03">
                 External Link
               </NavLink>
             </NavItem>

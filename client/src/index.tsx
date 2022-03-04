@@ -11,11 +11,16 @@ interface welcomeText {
   extraText: string
 }
 
+interface userData {
+  user: string
+}
+
 ReactDOM.render(
   <React.StrictMode>
     {/* <App headerText="Welcome to the Shop" extraText='Hello <username>' /> */}
     <Router>
-      <App />
+      <App /> 
+      {/* <TODO> set user={res.data.userDoc} as prop of App*/}
     </Router>
   </React.StrictMode>,
   document.getElementById('root')

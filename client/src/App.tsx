@@ -17,9 +17,16 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
 
-  const [result, setResult] = useState("");
+  //const [result, setResult] = useState("");
 
-  const [user, setUser] = useState(""); //props.user?
+
+  const [currentUser, setCurrentUser] = useState(""); //props.user?
+
+  // updateTheUser = (userObj) => {
+  //   setCurrentUser(userObj);
+  // }
+
+
 
   useEffect(() => {
     console.log("This only run once!");
@@ -44,7 +51,7 @@ function App() {
           <Route path='/products/:productId' element={<ProductDetails />} />
           {/* <Route path='/collection/winter' element={<Winter/>}></Route> */}
           {/* <Route path='/collection/summer' element={<Summer/>}></Route> */}
-          <Route path='/login' element={<Login/>} />
+          <Route path='/login' element={<Login />} />
 
 
         </Routes>
