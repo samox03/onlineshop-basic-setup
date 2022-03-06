@@ -2,6 +2,17 @@ import React from 'react';
 import { Jumbotron } from '../extras/Jumbotron';
 //import { Card } from './card';
 
+
+{/*TODO:
+  State with products: empty array 
+  set loading as state as: true
+  axios.get('/api/products').then((response) => {
+    setProductlist(response.data)
+    setLoading(false)
+  })
+ */}
+
+
 export const Main = () => {
  return (
   <main role="main">
