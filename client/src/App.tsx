@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Redirect } from "react-router-dom";
 
 import logo from './logo.svg';
 import './App.css';
@@ -10,23 +10,23 @@ import ProductCarousel from './components/products/carousel/ProductCarousel';
 import { Sale } from './components/products/sale/Sale'
 import { ProductDetails } from './components/products/product_details/ProductDetails'
 import { Login } from './components/auth/Login';
-import { Main } from './components/products/Main';
+import Main from './components/products/Main';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
-function App() {
+function App(props) {
 
   //const [result, setResult] = useState("");
 
 
-  const [currentUser, setCurrentUser] = useState(""); //props.user?
+  const [currentUser, setCurrentUser] = useState(props.user); //props.user?
 
-  // updateTheUser = (userObj) => {
-  //   setCurrentUser(userObj);
-  // }
-
-
+  useEffect(()=> {
+    function updateTheUser(userObj){
+      setCurrentUser(userObj)
+    }
+  })
 
   useEffect(() => {
     console.log("This only run once!");
@@ -52,6 +52,21 @@ function App() {
           {/* <Route path='/collection/winter' element={<Winter/>}></Route> */}
           {/* <Route path='/collection/summer' element={<Summer/>}></Route> */}
           <Route path='/login' element={<Login />} />
+          {/* first notes on login logic: */}
+          {/* <Route path='/login' render={() => { 
+            if (props.currentUser) {
+              if (props.currentUser.admin){
+                return <Redirect to='/admin'></Redirect>
+              } else {
+                return <Redirect to='/customer'></Redirect>
+              }
+            } else {
+              return (
+              <Login logInTheUser={updateTheUser}></Login>
+              )
+            }
+          }}>
+          </Route> */}
 
 
         </Routes>

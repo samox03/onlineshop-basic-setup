@@ -5,26 +5,31 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.css';
+import axios from 'axios'
 
-interface welcomeText {
-  headerText: string;
-  extraText: string
-}
+//example
+// interface welcomeText {
+//   headerText: string;
+//   extraText: string
+// }
 
-interface userData {
-  user: string
-}
+// interface user {
+//   user: string
+// }
 
-ReactDOM.render(
-  <React.StrictMode>
-    {/* <App headerText="Welcome to the Shop" extraText='Hello <username>' /> */}
-    <Router>
-      <App /> 
-      {/* <TODO> set user={res.data.userDoc} as prop of App*/}
-    </Router>
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+axios.get('api/user/checkuser').then(res => {
+  ReactDOM.render(
+    <React.StrictMode>
+      {/* <App headerText="Welcome to the Shop" extraText='Hello <username>' /> */}
+      <Router>
+        <App user={res.data.userDoc}/> 
+      </Router>
+    </React.StrictMode>,
+    document.getElementById('root')
+  );
+})
+
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

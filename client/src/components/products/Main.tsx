@@ -1,11 +1,13 @@
 import React from 'react';
+import axios from "axios";
+import { useEffect, useState } from "react";
 import { Jumbotron } from '../extras/Jumbotron';
 //import { Card } from './card';
 
 
 {/*TODO:
-  State with products: empty array 
-  set loading as state as: true
+  for hooks how to implement componentDidMount() ??
+  should include sth like-> 
   axios.get('/api/products').then((response) => {
     setProductlist(response.data)
     setLoading(false)
@@ -13,7 +15,16 @@ import { Jumbotron } from '../extras/Jumbotron';
  */}
 
 
-export const Main = () => {
+
+export default function Main () {
+
+  let [producttable, setProducttable] = useState([]);
+  let [loading, setLoading] = useState(true)
+
+useEffect(() => {
+  
+})
+
  return (
   <main role="main">
    <Jumbotron />
