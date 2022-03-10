@@ -9,7 +9,7 @@ import NavBar from './components/navigation/Navbar';
 import ProductCarousel from './components/products/carousel/ProductCarousel';
 import { Sale } from './components/products/sale/Sale'
 import { ProductDetails } from './components/products/product_details/ProductDetails'
-import { Login } from './components/auth/Login';
+import { Login } from './pages/auth/Login';
 import Main from './components/products/Main';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -52,22 +52,22 @@ function App(props) {
           {/* <Route path='/collection/winter' element={<Winter/>}></Route> */}
           {/* <Route path='/collection/summer' element={<Summer/>}></Route> */}
           <Route path='/login' element={<Login />} />
-          {/* first notes on login logic: */}
-          {/* <Route path='/login' render={() => { 
-            if (props.currentUser) {
-              if (props.currentUser.admin){
-                return <Redirect to='/admin'></Redirect>
-              } else {
-                return <Redirect to='/customer'></Redirect>
-              }
-            } else {
-              return (
-              <Login logInTheUser={updateTheUser}></Login>
-              )
-            }
-          }}>
-          </Route> */}
 
+                  {/* first notes on login logic: */}
+                  {/* <Route path='/login' render={() => { 
+                    if (props.currentUser) {
+                      if (props.currentUser.admin){
+                        return <Redirect to='/admin'></Redirect>
+                      } else {
+                        return <Redirect to='/customer'></Redirect>
+                      }
+                    } else {
+                      return (
+                      <Login logInTheUser={updateTheUser}></Login>
+                      )
+                    }
+                  }}>
+                  </Route> */}
 
         </Routes>
         <p>Show grid with products</p>

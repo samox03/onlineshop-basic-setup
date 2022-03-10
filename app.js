@@ -86,6 +86,7 @@ app.locals.title = 'Onlineshop - A Prototype';
 const allRoutes = require("./routes");
 app.use("/api", allRoutes);
 
+app.use('/api/user', require('./routes/user'))
 
 
 // // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes

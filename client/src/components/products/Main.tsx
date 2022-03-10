@@ -6,7 +6,7 @@ import { Jumbotron } from '../extras/Jumbotron';
 
 
 {/*TODO:
-  for hooks how to implement componentDidMount() ??
+  for hooks -> implement componentDidMount() ==>> useEffect() ??
   should include sth like-> 
   axios.get('/api/products').then((response) => {
     setProductlist(response.data)
@@ -22,7 +22,7 @@ export default function Main () {
   let [loading, setLoading] = useState(true)
 
 useEffect(() => {
-  
+
 })
 
  return (
