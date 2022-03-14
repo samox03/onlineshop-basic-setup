@@ -5,48 +5,44 @@ import { Jumbotron } from '../extras/Jumbotron';
 //import { Card } from './card';
 
 
-{/*TODO:
-  for hooks -> implement componentDidMount() ==>> useEffect() ??
-  should include sth like-> 
-  axios.get('/api/products').then((response) => {
-    setProductlist(response.data)
-    setLoading(false)
-  })
- */}
 
-
-
-export default function Main () {
+export default function Main() {
 
   let [producttable, setProducttable] = useState([]);
   let [loading, setLoading] = useState(true)
 
-useEffect(() => {
+  useEffect(() => {
+    //TODO:
+    // axios.get('/api/products').then((response) => {
+    //   setProductlist(response.data)
+    //   setLoading(false)
+    // })
+  })
 
-})
-
- return (
-  <main role="main">
-   <Jumbotron />
-   <div className="album py-5 bg-light">
-    <div className="container">
-     <div className="row">
-       <p>sdfghjk</p>
-       <p>sdfghjk</p>
-       <p>sdfghjk</p>
-
-      {/* <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card /> */}
-     </div>
-    </div>
-   </div>
-  </main>
- );
+  return (
+    <main role="main">
+      <Jumbotron />
+      <div className="album py-5 bg-light">
+        <div className="container">
+          <div className="row">
+            <p>sdfghjk</p>
+            <p>sdfghjk</p>
+            <p>sdfghjk</p>
+            {/* producttable.map((product)=> {
+              return(
+                    <div key={product._id}>
+                    <Link to={`/`}>
+                        <img src={product.img}>
+                      <div>
+                        {product.name}
+                      </div>
+                      <Link>
+                    </div>
+                    )
+              }) */}
+          </div>
+        </div>
+      </div>
+    </main>
+  );
 };

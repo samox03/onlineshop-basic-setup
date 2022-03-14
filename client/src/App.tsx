@@ -16,7 +16,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App(props) {
-
+//TODO:defining props with Typescript -> interface User{name: string, id: number, admin: boolean}
   //const [result, setResult] = useState("");
 
 
@@ -24,6 +24,7 @@ function App(props) {
 
   useEffect(()=> {
     function updateTheUser(userObj){
+      //TODO:defining props with Typescript -> interface User{name: string, id: number, admin: boolean}
       setCurrentUser(userObj)
     }
   })
